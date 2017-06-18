@@ -1,21 +1,19 @@
 pi-temperature
 ==============
 
-Measure the temperature on a Raspberry Pi - Node.js module
+Measure the temperature of a Raspberry Pi.
 
 ## Usage
-The API is very easy, just do something like this:
-```
+```js
 var temp = require("pi-temperature");
-temp.measure(function(temp)
-{
-	console.log("It's " + temp + " celsius!");
+temp.measure(function(err, temp) {
+	if (err) console.error(err);
+	else console.log("It's " + temp + " celsius.");
 });
 ```
-**Note:** Temperature is in celsius.
 
 ## API
-### temp.measure(function callback(temperature, err))
-Measures the temperature and calls the callback with the parameters temperature and error (if any.)
+### measure(function callback(err, temperature))
+Measures the temperature and calls the callback with the error and temperature.
 
-Temperature is in celsius.
+**Note:** Temperature is in celsius.
