@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Measure the temperature of a Raspberry Pi.",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/odensc/pi-temperature.git"
